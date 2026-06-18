@@ -1,0 +1,1 @@
+{"orders":[{"type":"completeness","column":"order_id","max_null_rate":0},{"type":"uniqueness","column":"order_id"}]}
