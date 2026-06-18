@@ -1,0 +1,18 @@
+name: delta-lake-quality-framework
+owner: Engr-InamUllah
+status: scaffold
+stack: 'Databricks, Delta Lake, PySpark, Python'
+pipeline:
+  - profile
+  - validate
+  - quarantine
+  - report
+quality_gates:
+  - schema_validation
+  - null_thresholds
+  - duplicate_detection
+  - freshness_check
+  - automated_tests
+security:
+  secrets: environment_or_secret_store
+  least_privilege: true
