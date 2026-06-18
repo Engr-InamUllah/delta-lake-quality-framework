@@ -1,2 +1,40 @@
-# delta-lake-quality-framework
-Reusable Delta Lake data-quality checks, quarantine patterns, and audit metrics.
+# Delta Lake Quality Framework
+
+A configuration-driven framework for completeness, uniqueness, validity, freshness, and referential-integrity checks on Delta tables.
+
+## Architecture
+
+`	ext
+Delta tables -> Rule engine -> Passed/Quarantine -> Audit metrics
+`
+
+## Technology stack
+
+Databricks, Delta Lake, PySpark, Python
+
+## Repository blueprint
+
+- project.yaml — scope, pipeline stages, and quality expectations
+- src/ — ingestion and transformation implementation
+- 	ests/ — unit, integration, and data-quality tests
+- docs/ — architecture decisions and operational guidance
+
+## Implementation roadmap
+
+1. Create representative source data and document its contract.
+2. Implement the pipeline stages with idempotent processing.
+3. Add automated schema, null, duplicate, and business-rule checks.
+4. Capture run metadata, rejected records, and performance metrics.
+5. Add CI validation and publish screenshots or sample outputs.
+
+## Definition of done
+
+- Reproducible setup with no embedded credentials
+- Incremental and restart-safe processing
+- Automated tests and documented quality thresholds
+- Observable runs with clear failure handling
+- Architecture diagram and demonstration results
+
+## Status
+
+Portfolio scaffold created. Implementation milestones are tracked in the roadmap above.
